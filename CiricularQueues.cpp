@@ -22,7 +22,16 @@ class Queues
             cin >> num;
             cout << endl;
 
-            // Cek apakah antrian penuh
+            // Cek apakah antrian kosong
+            if ((FRONT == 0 && REAR = max - 1) || (FRONT == REAR + 1))
+            {
+                COUT << "\nQueue overvlow\n";
+                return;
+            }
+
+
+
+            // Cek apakah antrian kosng
             if (FRONT == -1)
             {
                 FRONT = 0;
