@@ -1,15 +1,15 @@
 #include <iostream>
 using namespace std;
 
-class Queues
+class queues
 {
     private:
         static const int max = 3;
         int FRONT, REAR;
-        int queue_array{max};
+        int queue_array[max];
 
     public:
-        Queues() 
+        queues() 
         {
             FRONT = -1;
             REAR = -1;
@@ -72,6 +72,19 @@ class Queues
 			else
 				FRONT = FRONT + 1;
 		}
+    }
+
+    void display()
+    {
+        int FRONT_Position = FRONT;
+        int REAR_Position = REAR;
+
+        // Cek apakah antrian kosong
+        if (FRONT_Position == -1)
+        {
+            cout <<"Queue is empty\n";
+            return;
+        }
     }
 
 
