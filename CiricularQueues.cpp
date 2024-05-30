@@ -9,7 +9,7 @@ class Queues
         int queue_array{max};
 
     public:
-        queues() 
+        Queues() 
         {
             FRONT = -1;
             REAR = -1;
@@ -23,9 +23,9 @@ class Queues
             cout << endl;
 
             // Cek apakah antrian kosong
-            if ((FRONT == 0 && REAR = max - 1) || (FRONT == REAR + 1))
+            if ((FRONT == 0 && REAR == max - 1) || (FRONT == REAR + 1))
             {
-                COUT << "\nQueue overvlow\n";
+                cout << "\nQueue overvlow\n";
                 return;
             }
 
@@ -44,5 +44,19 @@ class Queues
                 else
                     REAR = REAR + 1;
             }
-            queue_array[REAR] = num;
+            queue_array[REAR] = num;     
         }
+    
+    void remove()
+    {
+        // Cek apakah antrian kosong
+        if (FRONT == -1)
+        {
+            cout << "Queue underflow\n";
+            return;
+        }
+    }
+
+
+
+};
